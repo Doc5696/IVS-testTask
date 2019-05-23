@@ -1,0 +1,13 @@
+.navBlock{
+  position: relative;
+  width: calc(100px + 40vmin);
+  height: calc(100px + 40vmin);
+  border: 2px solid #42f471;
+  z-index: 2;
+  .navButtons{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+  }
+}

@@ -1,0 +1,16 @@
+.navLink{
+  margin: calc(15px + 2vmin);
+  a{
+    box-sizing: border-box;
+    text-decoration: none;
+    padding: 10px 15px;
+    color: #42f471;
+    border: 2px solid #42f471;
+    transition: 0.15s;
+    &:hover{
+      color: #000;
+      border: 2px solid #000;
+      background-color: #42f471;
+    }
+  }
+}
