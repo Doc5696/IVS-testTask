@@ -12,7 +12,10 @@ class App extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      users: []
+      users: [],
+      newUser: {
+        name: ""
+      }
     }
   }
 
@@ -34,10 +37,21 @@ class App extends React.Component {
   addUser(user) {
     fetch(`${baseUrl}/user`, {
       method: "POST",
-      body: JSON.stringify(user)
+      body: JSON.stringify({name: user})
     }).then(() => {
       this.loadUsers();
+    })
+    .catch(err => {
+      throw new Error(err)
     });
+  }
+
+  handleInput = (event) => {
+    this.setState({newUser: event.target.value});
+  }
+
+  handleSubmit = (event) => {
+    this.addUser(this.state.newUser)
   }
 
 
@@ -48,7 +62,7 @@ class App extends React.Component {
             <Route
               exact
               path={["/page_1", "/"]}
-              render={() => (<FirstPage />)}
+              render={() => (<FirstPage handleInput={this.handleInput} handleSubmit={this.handleSubmit} />)}
             />
             <Route
               path="/page_2"
