@@ -13,4 +13,4 @@ function List(props) {
   )
 }
 
-export {List};
+export { List };

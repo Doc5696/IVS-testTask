@@ -8,4 +8,4 @@ function User(props) {
   )
 }
 
-export {User};
+export { User };

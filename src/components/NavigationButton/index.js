@@ -21,4 +21,4 @@ function NavigationButton(props) {
   );
 }
 
-export {NavigationButton};
+export { NavigationButton };

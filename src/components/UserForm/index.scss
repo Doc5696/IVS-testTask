@@ -1,0 +1,31 @@
+.userForm{
+  position: absolute;
+  top: 5%;
+  z-index: 3;
+  input{
+    background-color: transparent;
+    font-size: calc(10px + 2vmin);
+    color: #fff;
+    padding: 5px;
+    border: 2px solid rgba(255,255,255,0.3);
+    text-align: right;
+    &:focus{
+      outline: 1px solid#42f471;
+      border: 2px solid transparent;
+    }
+  }
+  button{
+    background: transparent;
+    color: rgba(255,255,255,0.3);
+    padding: 5px 10px;
+    font-size: calc(9px + 2vmin);
+    margin-left: 25px;
+    border: 2px solid rgba(255,255,255,0.3);
+    transition: 0.15s;
+    &:hover{
+      cursor: pointer;
+      border: 2px solid #42f471;
+      color: #42f471;
+    }
+  }
+}
