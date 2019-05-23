@@ -1,0 +1,17 @@
+.usersList{
+  position: absolute;
+  right: 10%;
+  top: 50%;
+  transform: translate(0, -50%);
+  max-height: 90vmin;
+  list-style: none;
+  overflow-y: auto;
+  text-align: right;
+  li{
+    margin: 10px 0 10px 0;
+    padding: 5px 10px;
+    &:nth-child(even){
+      background: #111;
+    }
+  }
+}
